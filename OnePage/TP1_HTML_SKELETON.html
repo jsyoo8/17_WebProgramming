@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>TP1 in HTML5 Skeleton</title>
+<!-- CSS, JS External 정의 -->
+<link rel="stylesheet" type="text/css" href="./css/FtHd.css">
+<link rel="stylesheet" type="text/css" href="./css/Main.css">
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/AllMenu.js"></script>
+<script type="text/javascript" src="./js/Gallery.js"></script>
+<script type="text/javascript" src="./js/Intro.js"></script>
+<script type="text/javascript" src="./js/Gbook.js"></script>
+<script type="text/javascript" src="./js/ImageSlide.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+	<!-- 레이아웃은 HTML5 엘리먼트를 사용할 것 -->
+	<header>
+		<!-- Header (Menu bar) -->
+		<div class="Bar">
+			<div class="Center">
+				<button class="Menu" onclick="window.scroll(0, 0)">HOME</button>
+				<button class="Menu" onclick="posMove('ImageSlide')">IMAGE SLIDE</button>
+				<button class="Menu" onclick="posMove('Introduce')">INTRODUCE</button>
+				<button class="Menu" onclick="posMove('Gallery')">GALLERY</button>
+				<button class="Menu" onclick="posMove('Guestbook')">GUEST BOOK</button>
+				<button class="AllMenu">
+					<img  id="change" onclick="showMenu()" src="./img/menu_button/down.PNG"/>
+					<ul>
+						<li onclick="window.scroll(0, 0)">HOME</li>
+					  <li onclick="posMove('ImageSlide')">IMAGE SLIDE</li>
+					  <li onclick="posMove('Introduce')">INTRODUCE</li>
+					  <li onclick="posMove('Gallery')">GALLERY</li>
+					  <li onclick="posMove('Gallery')">GUEST BOOK</li>
+					</ul>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class = "ImageSlide">image slide
+			<div class="photoBox">
+				<div>
+
+					<div id="slide" align="center">
+						<img class="pslide_c" src="./img/slide_image/a.jpg" style="height: 500px; width: 100%;">
+						<img class="pslide" src="./img/slide_image/b.jpg" style="height: 500px; width: 100%;">
+						<img class="pslide" src="./img/slide_image/c.jpg" style="height: 500px; width: 100%;">
+						<img class="pslide" src="./img/slide_image/d.jpg" style="height: 500px; width: 100%;">
+						<img class="pslide" src="./img/slide_image/e.jpg" style="height: 500px; width: 100%;">
+						<div style="text-align:center">
+							<span class="dot" style="background-color:black;" onclick="dotSlide(0)"></span>
+							<span class="dot" onclick="dotSlide(1)"></span>
+							<span class="dot" onclick="dotSlide(2)"></span>
+							<span class="dot" onclick="dotSlide(3)"></span>
+							<span class="dot" onclick="dotSlide(4)"></span>
+						</div>
+					</div>
+
+
+				</div>
+				<img class="btnLeft" onclick="nextSlide(-2)" src="./img/slide_button/left.gif"/>
+				<img class="btnRight" onclick="nextSlide(0)" src="./img/slide_button/right.gif"/>
+			</div>
+
+			<script>
+				sshow(true);
+			</script>
+
+		</div>
+		<div class = "Introduce">introduce
+			<table border="1">
+
+				<thead align="center">
+					<tr>
+						<td colspan="2">
+							<h1>우리집 말티즈</h1>
+						</td>
+					</tr>
+				</thead>
+
+				<tbody align="center">
+					<tr>
+						<td>
+							<h2 id="bcolor">흰둥이</h2>
+							<p>말티즈, 男</p>
+							<img src="./img/intro_image/hd01.PNG" style="max-width: 100%; height: auto;"/>
+						</td>
+						<td style="width:50%" align="left">
+							<br>
+								웹 페이지 제작자에 집에는 <span id="unline">아~주 귀여운 하양 멍멍이</span>
+								말티즈 <strong><span id="bbig">흰둥이</span></strong>가 살고있다.
+								이 웹페이지는 흰둥이에 대한 자랑을 하는 웹페이지로
+								<span id="bbold">멍멍이를 싫어하는 분들은 주의</span>가 필요하다.
+							<br>
+							<br>
+								<strong><span id="pcolor">말티즈의 성격</span></strong>은 적극적이고 장난이 심한 강아지이다.
+								우아하게 생긴 생김새와 달리 집에서 매우 활발하며 늘 움직인다.
+								그래서 많은 실외활동이 필요하지 않다. 또한 말티즈는 붙임성이 좋아
+								재택근무하시거나 실내에서 자주 있는 분에게 적합하다.
+								애교도 많고, 머리회전도 좋아 키우기 쉬운 애완견 중 하나다.
+							<br>
+							<br>
+								<strong><span id="pcolor">말티즈의 특징</span></strong>은 하얀색으로 긴 털과 검은 눈동자이다.
+								말티즈는 몰타섬이 영국령으로 넘어갈 때 영국 왕실이나 귀족계급에서
+								많이 기르던 강아지라고 알려져 있다.
+								귀족적이고 우아한 느낌이 드는 외모로 오랜 시간 많은 사람들의
+								사랑을 받아왔다. 지중해의 몰타섬에서 태어나 마르티즈 (몰티즈) 라는
+								이름으로 불린다.
+							<br>
+							<br>
+								<strong><span id="pcolor">키울 때 주의사항</span></strong>은 여러가지 있다.
+								말티즈 성격은 굉장히 좋은 편이다. 앞서 말했듯이 말티즈 성격은 애교가 많은 애완견이다.
+								하지만 아이들에게 대드는 경향이 있다.	말티즈 키우는법은 귀엽다고 응석을
+								많이 받아줄 경우 버릇 나쁜 개가 될 수 있으니 꼭! 좋은 것과 나쁜 것을 구별하여
+								처음부터 가르치는 것이 필요하다.
+							<br>
+							<br>
+								<strong><span id="pcolor">털 관리 방법</span></strong>때문에 어려움을 겪는 분이 많이 있다.
+								그래서 털을 짧게 잘라서 키우는 사람이 많다. 일반적으로 말티즈(몰티즈)는 슈나우저컷을 한다.
+								말티즈 키우는법에서 털관리를 할 때 털을 짧게 자르면 털관리에 신경을 덜 쓸수 있다.
+								이는 실내에서 키우기 적합한 정도이다. 말티즈는 털이 섬세하기 때문에 엉키지 않게
+								종종 브러싱을 해야한다.
+							<br>
+							<br>
+								<strong><span id="pcolor">말티즈의 눈물 자국</span></strong>은 눈에 염증이 생기면
+								눈물이 나면서 눈 주위 색이 붉은 색으로 변하게 된다. 그로 인해 말티즈 눈물자국이 많이 생기게 된다.
+								이 때! 눈 전용세정액을 넣어서 염증이 생기지 않도록 해야한다. 그래서 말티즈 눈물자국 관리에 신경써야 하는데,
+								특히 눈 앞쪽에 눈물이 흐르는 털은 기른 후 위로 묶어주면 말티즈 눈물자국 관리에 용이하다.
+							<br>
+							<br>
+							<br>
+							출처 : http://www.trcanada.com
+						</td>
+					</tr>
+				</tbody>
+
+				<tfoot align="center">
+					<tr>
+						<td colspan="2">
+							흰둥이의 하루 일과(단위 : 시간)
+							<div style="width:50%">
+								<canvas id="canvas" height="450" width="600"></canvas>
+							</div>
+							<script>
+								createChart();
+							</script>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<div class = "Gallery">gallery
+			<div>
+				<div class="galBox" id="im1">
+	  			<img src="./img/gallary_image/1.jpg" onclick="openMdl();clkGal(0);" class="galimg">
+					<div align="center" class="galtext" onclick="openMdl();clkGal(0);">피곤</div>
+					<img src="./img/modal_button/x.PNG" class="closeCS" onclick="gClose(1)">
+				</div>
+				<div class="galBox" id="im2">
+	  			<img src="./img/gallary_image/2.jpg" onclick="openMdl();clkGal(1);" class="galimg">
+					<div align="center" class="galtext" onclick="openMdl();clkGal(1);">졸림</div>
+					<img src="./img/modal_button/x.PNG" class="closeCS" onclick="gClose(2)">
+				</div>
+				<div class="galBox" id="im3">
+	  			<img src="./img/gallary_image/3.jpg" onclick="openMdl();clkGal(2);" class="galimg">
+					<div align="center" class="galtext" onclick="openMdl();clkGal(2);">심심함</div>
+					<img src="./img/modal_button/x.PNG" class="closeCS" onclick="gClose(3)">
+				</div>
+				<div class="galBox" id="im4">
+	  			<img src="./img/gallary_image/4.jpg" onclick="openMdl();clkGal(3);" class="galimg">
+					<div align="center" class="galtext" onclick="openMdl();clkGal(3);">뒷태</div>
+					<img src="./img/modal_button/x.PNG" class="closeCS" onclick="gClose(4)">
+				</div>
+			</div>
+
+			<div id="mdl">
+  			<img src="./img/modal_button/x.PNG" onclick="closeMdl()" class="closeCS">
+  			<div class="mdlBox">
+	        <img src="./img/gallary_image/1.jpg" class="mdlimg" onclick="closeMdl()" id="sm1" style="margin-left: auto; margin-right: auto">
+	    		<img src="./img/gallary_image/2.jpg" class="mdlimg" onclick="closeMdl()" id="sm2" style="margin-left: auto; margin-right: auto">
+	        <img src="./img/gallary_image/3.jpg" class="mdlimg" onclick="closeMdl()" id="sm3" style="margin-left: auto; margin-right: auto">
+	        <img src="./img/gallary_image/4.jpg" class="mdlimg" onclick="closeMdl()" id="sm4" style="margin-left: auto; margin-right: auto">
+					<img class="gLeft" onclick="nextGal(-1)" src="./img/modal_button/left.PNG"/>
+					<img class="gRight" onclick="nextGal(1)" src="./img/modal_button/right.PNG"/>
+  			</div>
+			</div>
+		</div>
+
+		<script>
+			initGal();
+		</script>
+
+		<div class = "Guestbook">guest book
+			<div id="Gbook">
+				<table height="auto" style="width:100%; height: auto; border-spacing:0px; border: 1px solid black;">
+					<thead>
+						<tr align="center">
+							<th colspan="2" id="bbig" style="border: 1px solid black;">방명록</th>
+						</tr>
+					</thead>
+					<tbody id="downGbk">
+
+					</tbody>
+					<tfoot>
+						<tr>
+							<td align="center" style="background-color:#cccccc; border: 1px solid black;">작성자</td>
+							<td style="border: 1px solid black;"><textarea id="wname" style="width:99%;"></textarea></td>
+						</tr>
+						<tr>
+							<td align="center" style="background-color:#cccccc; border: 1px solid black;">내용</td>
+							<td style="border: 1px solid black;"><textarea id="wtext" style="width:99%;"></textarea></td>
+						</tr>
+						<tr align="center">
+							<td colspan="2" style="border: 1px solid black;"><button onclick="upGbk()">등록하기</button></td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p align="center">posted by 충남대학교, <span style="text-decoration:underline; color:blue; font-weight:bold;">201302436</span>, <span style="text-decoration:underline; color:blue; font-weight:bold;">유정식</span>, jsyoo8@naver.com</p>
+	</footer>
+
+</body>
+</html>

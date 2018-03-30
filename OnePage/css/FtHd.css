@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+/* Menu bar Start */
+/* mouse hover start*/
+div button ul li{
+  text-decoration: none;
+  cursor:pointer;
+}
+div button ul li:hover{
+  color: deeppink;
+}
+/* mouse hover end*/
+/* fixed Menu start*/
+.Bar {
+  position: fixed;
+  top:0px;
+  left: 0px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: pink;
+  width: 100%;
+}
+.Center{
+  margin-left: 30%;
+}
+/* fixed Menu end*/
+/* AllMenu start*/
+#change{
+  margin: -13px;
+  vertical-align: 30%;
+}
+.AllMenu > ul{
+  display:none;
+}
+.AllMenu_CLK > ul{
+  -webkit-animation: fadeIn 0.5s ease-in;
+  display: block;
+}
+@-webkit-keyframes fadeIn{
+	from{
+		opacity:0
+	}
+	to{
+		opacity:1
+	}
+}
+/* AllMenu end*/
+/* MovePos start*/
+div.Bar button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+div .Center :hover {
+  background: white;
+  cursor:pointer;
+}
+/* MovePos end*/
+/* Menu bar End */
+
+
+/* Footer Start */
+footer {
+    display: block;
+}
+/* Footer End */

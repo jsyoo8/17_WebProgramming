@@ -1,0 +1,221 @@
+@CHARSET "UTF-8";
+/* Main Start */
+main{
+  margin-top: 50px;
+}
+div.ImageSlide, div.Gallery {
+	background-color : #ffffcc;
+	outline : none;
+	width : 100%;
+  overflow:hidden;
+	height:auto;
+}
+div.Introduce, div.Guestbook {
+	background-color : #ccffff;
+	outline : none;
+	width : 100%;
+  overflow:hidden;
+	height:auto;
+}
+/* ImageSlide start */
+.photoBox {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.pslide {
+  display: none;
+}
+.pslide_c {
+  display: block;
+  -webkit-animation: fadeIn 0.5s ease-in;
+}
+/* left & right btn start */
+.btnLeft, .btnRight {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -50px;
+  padding: 15px;
+  transition: 0.5s ease;
+  border-radius: 0 1px 1px 0;
+}
+.btnRight {
+  right: 0;
+  border-radius: 1px 0 0 1px;
+}
+.btnLeft:hover, .btnRight:hover {
+  background-color: hotpink;
+  opacity: 0.5;
+}
+/* left & right btn end */
+/* dot start */
+#slide > div{
+  position: absolute;
+  left:45%;
+  top:95%;
+}
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+/* dot end */
+/* ImageSlide end */
+/* Introduce table start */
+main table{
+  background-color: white;
+  font-family: 바탕;
+}
+#bbig{
+  font-size:25pt;
+}
+#bbold{
+  font-weight:bold;
+}
+#unline{
+  text-decoration:underline;
+}
+#pcolor{
+  color: deeppink;
+}
+#bcolor{
+  color: blue;
+}
+/* Introduce table end */
+
+/* Gallery start */
+/* galBox start */
+.galBox {
+  position: relative;
+  float: left;
+  width: 20%;
+  padding: 15px 15px;
+}
+
+.galimg {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 300px;
+  transition: .5s ease;
+  -webkit-backface-visibility: hidden;
+}
+.galtext {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: yellowgreen;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.galBox:hover .galimg{
+  opacity: 0.3;
+}
+
+.galBox:hover .galtext{
+  opacity: 1;
+}
+
+.galBox:hover {
+  cursor: pointer;
+}
+/* galBox end */
+/* closeCS start */
+.closeCS {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.closeCS:hover, .closeCS:focus {
+  cursor: pointer;
+}
+/* closeCS end */
+/* mdlBox start */
+#mdl {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  z-index: 1;
+}
+
+.mdlBox {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  height: 80%;
+}
+.mdlimg {
+  display: none;
+  position:static;
+  background:black;
+  transform: scale(1.5);
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-animation: fadeIn 0.5s ease-in;
+}
+/* mdlBox end */
+/* left & right btn start */
+.gLeft, .gRight {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -50px;
+  padding: 15px;
+  transition: 0.5s ease;
+  border-radius: 0 1px 1px 0;
+}
+.gRight {
+  right: 0;
+  border-radius: 1px 0 0 1px;
+}
+.gLeft:hover, .gRight:hover {
+  background-color: hotpink;
+  opacity: 0.5;
+}
+/* left & right btn end */
+/* Gallery end */
+
+/* Guestbook table start */
+#Gbook{
+  max-width:50%;
+  margin-left: 25%;
+  border: 1px solid yellow;
+}
+#downGbk{
+  font-weight: lighter;
+}
+/* Guestbook table end */
+/* Main End */
+
+@-webkit-keyframes fadeIn{
+	from{
+		opacity:0
+	}
+	to{
+		opacity:1
+	}
